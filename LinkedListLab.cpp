@@ -38,6 +38,9 @@ void prepend(List* &list, string val){
 
 //This function removes the first item from the list
 void removeFirst(List* &list){
+    List* temp = list;
+    list = list->next;
+    delete temp;
     
 }
 
@@ -46,7 +49,7 @@ void removeFirst(List* &list){
 bool contains(List* haystack, string needle){
     //❓ Lab Question 10
     //YOUR CODE HERE
-    return false;
+   return false;
 }
 
 void insertAt(List* &list, int pos, string value){
@@ -74,7 +77,7 @@ void main(){
     printList(dinner);
 
     //❓ Lab Question 6
-    dinner = dinner -> next;
+    removeFirst(dinner);
     printList(dinner);
 
     //❓ Lab Question 10
